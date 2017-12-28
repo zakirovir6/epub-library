@@ -2,7 +2,7 @@
     "name": "zakirovir6/epub_library",
     "description": "Contains epubs' archive for testing and tools for iterating through archive",
     "type": "library",
-    "version": "v1.1.0",
+    "version": "v1.1.1",
     "authors": [
         {
             "name": "ZakirovIgor",

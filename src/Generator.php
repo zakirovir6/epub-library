@@ -43,6 +43,8 @@ class Generator
 
         $this->archive->setOutputDirectory($extractionFolder);
         $this->archive->extract();
+
+        $this->extractionFolder = $extractionFolder;
     }
 
     /**
