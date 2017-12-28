@@ -2,9 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-(new \Dotenv\Dotenv(__DIR__))->load();
-
-$generator = new \Epub\Generator();
+$generator = new \Epub\Generator(__DIR__ . '/resource/E.zip');
 
 foreach ($generator->getEpubsInArchive() as $epubFilename) {
     //

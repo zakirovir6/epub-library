@@ -15,9 +15,6 @@
         "gemorroj/archive7z": "^2.0",
         "zakirovir6/RecursiveDirectoryIterator": ">=v1.0"
     },
-    "require-dev": {
-        "vlucas/phpdotenv": "*"
-    },
     "repositories": [
         {
             "type": "vcs",

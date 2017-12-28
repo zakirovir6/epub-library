@@ -14,22 +14,24 @@ installation via composer.json
     ],
 ```
 
-You are expected to set the next environment variables:
+The generator is constructed with params:
 
 ```
-EPUB_ARCHIVE_FILENAME - this is full archive name with path. This may be empty, in this case the archive from resource/E.zip will be used
-EPUB_ARCHIVE_PASSWORD - this is archive password
-EPUB_ARCHIVE_EXTRACTION_FOLDER - temporary folder where archive will be being extracted
+$zipFilename - this is full archive name with path. This may be empty, in this case the archive from resource/E.zip will be used
+$zipPass - this is archive password
+$extractionFolder - temporary folder where archive will be being extracted
 ```
 
 example
 ```php
-//this is load environment from your dotenv
+require __DIR__ . '/vendor/autoload.php';
+
 (new \Dotenv\Dotenv(__DIR__))->load();
 
-$generator = new \Epub\Generator();
+$generator = new \Epub\Generator(__DIR__ . '/resource/E.zip');
 
 foreach ($generator->getEpubsInArchive() as $epubFilename) {
     //
 }
+
 ```
