@@ -48,6 +48,23 @@ class Generator
     }
 
     /**
+     * @return int
+     * @throws \Exception
+     */
+    public function getTotal()
+    {
+        $shell = "find {$this->extractionFolder} -type f | wc -l";
+        exec($shell, $output, $return_var);
+
+        if ($return_var !== 0)
+        {
+            throw new \Exception("Cannot execute shell command " . $shell);
+        }
+
+        return (int)implode('', $output);
+    }
+
+    /**
      * @return \Generator
      */
     public function getEpubsInArchive()

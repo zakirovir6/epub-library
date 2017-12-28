@@ -24,11 +24,13 @@ $extractionFolder - temporary folder where archive will be being extracted
 
 example
 ```php
+<?php
+
 require __DIR__ . '/vendor/autoload.php';
 
-(new \Dotenv\Dotenv(__DIR__))->load();
-
 $generator = new \Epub\Generator(__DIR__ . '/resource/E.zip');
+
+$total = $generator->getTotal();
 
 foreach ($generator->getEpubsInArchive() as $epubFilename) {
     //
