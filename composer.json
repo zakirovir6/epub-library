@@ -1,0 +1,30 @@
+{
+    "name": "zakirovir6/epub_library",
+    "description": "Contains epubs' archive for testing and tools for iterating through archive",
+    "type": "library",
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "ZakirovIgor",
+            "email": "zakirovir6@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-zip": "*",
+        "gemorroj/archive7z": "^2.0",
+        "zakirovir6/RecursiveDirectoryIterator": ">=v1.0"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:zakirovir6/RecursiveDirectoryIterator.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Epub\\": "src/"}
+    }
+}
